@@ -33,6 +33,18 @@ describe('valid inputs', () => {
   });
 });
 
+describe('extreme inputs', () => {
+  test('should return "Buzz" as it is a valid number and factor of 5,' +
+       ' but not a factor of 3 or 15 (large number)', () => {
+    expect(say(2147483645)).toBe('Buzz');
+  });
+
+  test('should return "Buzz" as it is a valid number and factor of 3,' +
+       ' but not a factor of 5 or 15 (negative large number)', () => {
+    expect(say(-1361903793)).toBe('Fizz');
+  });
+});
+
 describe('invalid inputs', () => {
   test('should throw exception as the input should not be empty', () => {
     expect(() => say()).toThrow(InputError.nullUndefinedEmptyError);

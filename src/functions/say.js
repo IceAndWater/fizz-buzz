@@ -12,14 +12,23 @@ function say(input) {
     if (regExResult === false) {
       throw new Error(InputError.notValidNumError);
     } else {
-      const inputNum = parseFloat(input);
 
-      if (inputNum % 3 === 0) {
-        result.push('Fizz');
-      }
+      if ((/\./).test(input)) {
+        return input;
+      } else {
+        try {
+          const inputNum = parseInt(input);
 
-      if (inputNum % 5 === 0) {
-        result.push('Buzz');
+          if (inputNum % 3 === 0) {
+            result.push('Fizz');
+          }
+    
+          if (inputNum % 5 === 0) {
+            result.push('Buzz');
+          }
+        } catch (error) {
+          throw new Error(InputError.parsingError);
+        }
       }
     }
   }
