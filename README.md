@@ -6,27 +6,27 @@ This program is created as part of the training for Jest.
 
 ### Instructions
 
+1. Setup a new `NodeJS` project with `Jest` (use https://jestjs.io/docs/en/getting-started.html for reference)
+
+2. Write a `Fizz Buzz` program with unit tests to cover it.
+
+   
+
+### Details
+
 Write a function `say()` that take in a number as  input and outputs a string. 
 
-A factor of 3 returns "Fizz", a factor of 5 returns "Buzz" and factor of 15 returns "Fizz Buzz", otherwise return the number. 
+A factor of `3` returns `Fizz`, a factor of` 5` returns `Buzz` and factor of `15` returns `Fizz Buzz`, otherwise return the number. 
 
 **Example**:
 
-* `say(4)` returns "4"
+* `say(4)` returns `4`
 
-* `say(33)` returns "Fizz"
+* `say(33)` returns `Fizz`
 
-* `say(95)` returns "Buzz"
+* `say(95)` returns `Buzz'
 
-* `say(60)` returns "Fizz Buzz"
-
-
-
-### Additional Instructions
-
-1. Setup a new nodejs project with jest (use https://jestjs.io/docs/en/getting-started.html for reference)
-
-2. Write a Fizz Buzz program with unit tests to cover it.
+* `say(60)` returns `Fizz Buzz`
 
 
 
