@@ -24,7 +24,7 @@ A factor of `3` returns `Fizz`, a factor of` 5` returns `Buzz` and factor of `15
 
 * `say(33)` returns `Fizz`
 
-* `say(95)` returns `Buzz'
+* `say(95)` returns `Buzz`
 
 * `say(60)` returns `Fizz Buzz`
 
