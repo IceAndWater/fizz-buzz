@@ -5,35 +5,39 @@ function say(input) {
 
   if (!input) {
     throw new Error(InputError.nullUndefinedEmptyError);
-  } else {
-    const regEx = /^-?[0-9]?[0-9\.]+$/;
-    const regExResult = regEx.test(input);
-
-    if (regExResult === false) {
-      throw new Error(InputError.notValidNumError);
-    } else {
-
-      if ((/\./).test(input)) {
-        return input;
-      } else {
-        try {
-          const inputNum = parseInt(input);
-
-          if (inputNum % 3 === 0) {
-            result.push('Fizz');
-          }
-    
-          if (inputNum % 5 === 0) {
-            result.push('Buzz');
-          }
-        } catch (error) {
-          throw new Error(InputError.parsingError);
-        }
-      }
-    }
   }
 
-  return result.length > 0 ? result.join(' ') : input;
+  if (!isValidNumber(input)) {
+    throw new Error(InputError.notValidNumError);
+  }
+
+  if (isDouble(input)) {
+    return input;
+  }
+    
+  const inputNum = parseInt(input);
+
+  if (inputNum % 15 === 0) {
+    return 'Fizz Buzz';
+  }
+
+  if (inputNum % 3 === 0) {
+    return 'Fizz';
+  }
+
+  if (inputNum % 5 === 0) {
+    result.push('Buzz');
+  }
+
+  return input;
+}
+
+function isValidNumber(input) {
+  return (/^-?[0-9]?[0-9\.]+$/).test(input);
+}
+
+function isDouble(input) {
+  return (/\./).test(input);
 }
 
 export { say };
