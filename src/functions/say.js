@@ -1,8 +1,6 @@
 import * as InputError from '../shared/input-error-types';
 
 function say(input) {
-  const result = [];
-
   if (!input) {
     throw new Error(InputError.nullUndefinedEmptyError);
   }
@@ -26,7 +24,7 @@ function say(input) {
   }
 
   if (inputNum % 5 === 0) {
-    result.push('Buzz');
+    return ('Buzz');
   }
 
   return input;
